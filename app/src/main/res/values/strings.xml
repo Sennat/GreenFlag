@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">NatnaelAlemayehu_GreenFlag</string>
+    <string name="app_desc">GreenFlag customers can create an accounts to access</string>
+    <string name="pass_criteria">Your password should have a minimum of 8 characters and contain at least one number, one uppercase, and one lowercase letter. You can use special characters.</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="dynamic_fragment">I Am Test Fragment</string>
+</resources>

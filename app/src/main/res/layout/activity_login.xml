@@ -1,0 +1,197 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/black"
+    tools:context=".Login">
+
+    <LinearLayout
+        android:id="@+id/top_wrap"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:background="@drawable/border"
+        android:layout_margin="10dp"
+        android:padding="10dp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <ImageButton
+            android:id="@+id/btn_back"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:background="@drawable/back_arrow"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"/>
+
+        <TextView
+            android:id="@+id/txt_header"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Create an account"
+            android:layout_marginStart="25dp"
+            android:textColor="@color/white"
+            android:textSize="20dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/btn_back"
+            app:layout_constraintBottom_toBottomOf="parent"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/inputs_wrap"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_margin="10dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/top_wrap">
+
+        <TextView
+            android:id="@+id/txt_email"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:text="Email address"
+            android:textColor="@color/white"
+            android:textSize="20sp"/>
+
+        <EditText
+            android:id="@+id/input_email"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:hint="youremail@domain.com"
+            android:ems="20"
+            android:padding="5dp"
+            android:background="@color/white"
+            android:textColor="@color/black"
+            android:inputType="textEmailAddress"
+            android:textColorHint="#959292" />
+
+        <TextView
+            android:id="@+id/txt_email_err"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginVertical="10dp"
+            android:drawableStart="@drawable/cross"
+            android:drawablePadding="15dp"
+            android:padding="8dp"
+            android:text=""
+            android:textColor="@color/white"
+            android:textSize="18sp"
+            android:visibility="gone" />
+
+        <TextView
+            android:id="@+id/txt_pass1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Create password"
+            android:layout_marginTop="5dp"
+            android:textColor="@color/white"
+            android:textSize="20sp"/>
+
+        <EditText
+            android:id="@+id/input_pass1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:hint="See criteria below"
+            android:ems="20"
+            android:padding="5dp"
+            android:background="@color/white"
+            android:textColor="@color/black"
+            android:inputType="textPassword"
+            android:textColorHint="#959292" />
+
+        <TextView
+            android:id="@+id/txt_pass_err_criteria"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:drawableStart="@drawable/cross"
+            android:drawablePadding="15dp"
+            android:text=""
+            android:padding="8dp"
+            android:visibility="gone"
+            android:layout_marginVertical="10dp"
+            android:textColor="@color/white"
+            android:textSize="18sp"/>
+
+        <TextView
+            android:id="@+id/txt_pass2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Repeat password"
+            android:layout_marginTop="5dp"
+            android:textColor="@color/white"
+            android:textSize="20sp"/>
+
+        <EditText
+            android:id="@+id/input_pass2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:ems="20"
+            android:padding="5dp"
+            android:background="@color/white"
+            android:textColor="@color/black"
+            android:inputType="textPassword"
+            android:textColorHint="#959292"/>
+
+        <TextView
+            android:id="@+id/txt_pass_err"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:drawableStart="@drawable/cross"
+            android:drawablePadding="15dp"
+            android:text=""
+            android:padding="8dp"
+            android:visibility="gone"
+            android:layout_marginVertical="10dp"
+            android:textColor="@color/white"
+            android:textSize="18sp"/>
+
+        <TextView
+            android:id="@+id/txt_criteria"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/pass_criteria"
+            android:textColor="@color/white"
+            android:fontFamily="@font/museosans_300"
+            android:layout_marginVertical="25dp"
+            android:textSize="15sp"/>
+
+    </LinearLayout>
+
+    <ImageButton
+        android:id="@+id/btn_account"
+        android:layout_width="350dp"
+        android:layout_height="60dp"
+        android:layout_marginHorizontal="50dp"
+        android:layout_marginTop="50dp"
+        android:layout_marginBottom="10dp"
+        android:enabled="false"
+        android:tint="#2B391C"
+        android:src="@drawable/gradient_button_background"
+        app:layout_constraintTop_toBottomOf="@+id/inputs_wrap"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent" />
+
+    <TextView
+        android:id="@+id/btn_next"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Next"
+        android:textColor="@color/black"
+        android:textAlignment="center"
+        android:textSize="30sp"
+        app:layout_constraintStart_toStartOf="@id/btn_account"
+        app:layout_constraintEnd_toEndOf="@id/btn_account"
+        app:layout_constraintTop_toTopOf="@id/btn_account"
+        app:layout_constraintBottom_toBottomOf="@id/btn_account"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
